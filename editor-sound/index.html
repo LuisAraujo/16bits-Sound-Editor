@@ -1,0 +1,141 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="FileSaver.js"></script>
+<script src="LocalStorage.js"></script>
+</head>
+
+<body id="body" style="width:100%; height:100%; margin:0; padding:0; background-color:rgb(50,50,50); color: #eee; overflow:hidden">
+<!--
+<div id="idtitle-app" style="width: 100%; height:20px; font-size:20px; text-align:center" id="title-app">No Name *</div>
+<div style="width: 100%; height:20px; padding:5px; margin:5px; padding:0;  background-color:rgb(10,10,10)">
+</div>
+-->
+
+<div style="width: calc(100% - 10px); height:20px; padding:5px; margin:5px; padding:0;  background-color:rgb(10,10,10)">
+<span class="bt-menu-head" id="bt-file"> File </span>
+<!-- <span class="bt-menu-head"  id=" "> View </span>-->
+</div>
+
+<div id= "modal-new-project"> 
+
+	<div class="head-modal" >
+		<span class="title" >New Project</span><span id="bt-exit-newproject" class="bt-exit" style="">x</span>
+	</div>
+
+	<!-- <div id="head-menu" >New Project</div> -->
+	
+	<div style="width:90%; margin-left: 5%; text-align: center">
+	Name 
+	<input firstname="true" class="inp-menu" id="name-project" size="2" value="Project"></input> <br>
+	</div>
+
+	
+	<div id="bt-createproject" >
+		Create Project
+	</div>
+</div>
+
+
+<div id= "modal-open-project"> 
+
+	<div class="head-modal" >
+		<span class="title" >Open Project</span><span id="bt-exit-openproject" class="bt-exit" style="">x</span>
+	</div>
+
+	<div  id="list-project">
+		a
+
+	</div>
+</div>
+
+	
+<div class="opt-menu" id="opt-menu-file">
+	<span class="bt-opt-menu"  id="bt-newproject"> New Project </span>
+	<span class="bt-opt-menu"  id="bt-openproject"> Open Project </span>
+	<span class="bt-opt-menu"  id="bt-saveproject"> Save Project </span>
+	<span class="bt-opt-menu"  id="bt-exportproject"> Export Project (txt) </span>
+</div>
+
+
+<div id= "menu-suspended"> 
+
+	<div id="head-menu" >Note Editor</div>
+	
+	<div style="width:70%; margin-left: 15%; text-align: center">
+	Note <br>
+	<input class="inp-menu" id="current-note" size="2" value="0"></input> <br>
+	</div>
+
+	<div style="width:70%; margin-left: 15%; text-align: center">
+	Time Start <br>
+	<input class="inp-menu" id="current-note-timestart" size="2" value="0"></input>  <br>
+	</div>
+	
+	<div style="width:70%; margin-left: 15%; text-align: center">
+	Duration <br>
+	<input class="inp-menu" id="current-note-duration" size="2" value="0"></input>  <br>
+	</div>
+
+	<div id="div-currentcolor">
+		<div id="layer-currentcolor">
+		</div>
+	</div> 
+</div>
+
+
+<div id= "menu-suspended2"> 
+
+	<div id="head-menu" >Play Sound</div>
+	
+	<div style="width:70%; margin-left: 15%; text-align: center">
+	<div id="bt-play2"></div> <div id="bt-stop2"></div>
+	</div>
+
+</div>
+	
+<div id= "menu-suspended3"> 
+
+	<div id="head-menu" >Setting</div>
+	
+	<div style="width:70%; margin-left: 15%; text-align: center">
+	Initial Octave <br>
+	<select class="select-menu" id="initial-octave">
+		<option value="2" selected>2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="4">5</option>
+	</select> 
+	</div>
+	
+	<div style="width:70%; margin-left: 15%; text-align: center">
+	Active Octave<br>
+	<select class="select-menu" id="initial-keyboard">
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4" selected >4</option>
+		<option value="5">5</option>
+	</select> 
+	</div>
+
+</div>
+
+</div>
+	
+	
+<div id="container-canvas" style="">
+	<canvas id="canvas" height="600" width="900"> </canvas>
+</div>
+
+
+
+<a id="downloadLnk" download="YourFileName.jpg" hidden>Download as image</a>
+<script src="sound.js"></script>
+<script src="Note.js"></script>
+<script src="Key.js"></script>
+<script src="mainscript.js"></script>
+</body>
+</html>
